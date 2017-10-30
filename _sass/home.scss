@@ -89,6 +89,7 @@ li {
 
 #problem {
   display: none;
+  margin-bottom: 20px;
 }
 
 @-webkit-keyframes spin {
@@ -111,6 +112,10 @@ li {
 
   h2 {
     font-size: 2em;
+  }
+  
+  #problem > h2 {
+    font-size: 1em;
   }
 }
 
