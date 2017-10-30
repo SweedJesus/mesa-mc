@@ -1,0 +1,14 @@
+title: Mesa Math Club
+email:
+description: >- # Ignore newlines until next key
+  San Diego Mesa College Math Club
+baseurl: ""
+url: ""
+twitter_username:
+github_username:
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:

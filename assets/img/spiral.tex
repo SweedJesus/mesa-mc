@@ -1,0 +1,20 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg
+\infile\space\outfile}},multi=false]{standalone}
+\usepackage{tikz}
+\newcommand\spiral{}%
+\def\spiral[#1](#2)(#3:#4:#5){%
+  \pgfmathsetmacro{\domain}{pi*#3/180+#4*2*pi}
+  \draw[#1,
+    shift={(#2)},
+    domain=0:\domain,
+    variable=\t,
+    smooth,
+    samples=int(\domain/0.08)] plot({\t r}: {#5*\t/\domain})
+    }
+\begin{document}
+%\pagecolor{black}
+\begin{tikzpicture}
+  \spiral[white,line width=0.4mm](0,0)(0:6:25);
+  \spiral[white,line width=0.4mm](0,0)(0:6:-25);
+\end{tikzpicture}
+\end{document}
