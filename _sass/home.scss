@@ -3,7 +3,8 @@ $link-color: #7090b0; // ligher blue
 
 //$background-image: "../../assets/img/ep_naturalblack.png";
 $background-image: "../../assets/img/dark_stripes.png";
-$background-color: #102030; // dark blue
+$background-color-a: #102030; // top
+$background-color-b: #204060; // bottom
 
 $spiral-image: "../../assets/img/spiral.svg";
 
@@ -19,8 +20,8 @@ html, body {
   height: 100%;
   background-image:
     url($background-image),
-    linear-gradient(to top, white, $background-color);
-  background-blend-mode: luminosity;
+    linear-gradient(to top, $background-color-a, $background-color-b);
+  background-blend-mode: screen;
 }
 
 a {
@@ -87,6 +88,8 @@ li {
   background-position: center;
   background-size: 6000px 6000px;
   -webkit-animation: spin infinite 20s linear;
+  -moz-webkit-animation: spin infinite 20s linear;
+  -o-webkit-animation: spin infinite 20s linear;
 }
 
 #problem {
