@@ -3,7 +3,7 @@ $link-color: #7090b0; // ligher blue
 
 //$background-image: "../../assets/img/ep_naturalblack.png";
 $background-image: "../../assets/img/dark_stripes.png";
-$background-color: #000011; // dark blue
+$background-color: #102030; // dark blue
 
 $spiral-image: "../../assets/img/spiral.svg";
 
@@ -18,9 +18,9 @@ html, body {
   padding: 0;
   height: 100%;
   background-image:
-    url($background-image);
-    //linear-gradient(to top, white, $background-color);
-  //background-blend-mode: luminosity;
+    url($background-image),
+    linear-gradient(to top, white, $background-color);
+  background-blend-mode: luminosity;
 }
 
 a {
