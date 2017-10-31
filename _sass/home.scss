@@ -1,22 +1,25 @@
-$color-a: #fff; // white (text)
-$color-b: rgba(16,32,48,0.5); // dark blue (background) #102030
-$color-c: #7090b0; // ligher blue (link)
+$font-color: #fff; // white
+$link-color: #7090b0; // ligher blue
 
-$background-image: "../../assets/img/dark_stripes.png";
+$background-image: "../../assets/img/ep_naturalblack.png";
+$background-color: #102030; // dark blue
+
 $spiral-image: "../../assets/img/spiral.svg";
 
 html * {
   font-family: 'Josefin Slab', serif;
   font-weight: normal;
-  color: $color-a;
+  color: $font-color;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  //background-color: $color-b;
-  background-image: url($background-image);
+  background-image:
+    url($background-image),
+    linear-gradient(to top, white, $background-color);
+  background-blend-mode: luminosity;
 }
 
 a {
@@ -26,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: $color-c;
+  color: $link-color;
 }
 
 h1 {
@@ -55,12 +58,6 @@ li {
   white-space: nowrap;
 }
 
-.container {
-  height: 100%;
-  background-color: $color-b;
-  z-index: -2;
-}
-
 .title {
   position: fixed;
   width: 100%;
@@ -72,6 +69,7 @@ li {
   width: 100%;
   position: fixed;
   bottom: 0;
+  padding-bottom: 20px;
 }
 
 .spiral {
@@ -91,8 +89,7 @@ li {
 }
 
 #problem {
-  display: none;
-  margin-bottom: 20px;
+  //display: none;
 }
 
 @-webkit-keyframes spin {
@@ -115,6 +112,10 @@ li {
 
   h2 {
     font-size: 2em;
+  }
+  
+  #problem {
+    font-size: 1em;
   }
 }
 

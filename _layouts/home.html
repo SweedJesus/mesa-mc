@@ -24,38 +24,43 @@
         menuSettings: { zoom: "Hover" }
       });
     </script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG"></script>
     <script>
+      // Fade out "problem of the week", fade in MathJax problem
       $(function() {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
-          $("#problem").fadeIn(300);
-        })
+        var problem = $("#problem");
+        setTimeout(function() {
+          problem.fadeOut(300, function() {
+            problem.html(String.raw`${{ site.data.integrals | first }}$`);
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
+              problem.fadeIn(300);
+            })
+          });
+        }, 1000);
       });
     </script>
   </head>
   <body>
     {% include mathjax.html %}
-    <div class="container">
-      <div class="spiral"></div>
-      <div class="title">
-        <h1>mesa math club</h1>
-        <h2>
-          <ul>
-            <li>wednesdays,</li>
-            <li>3:00, MS-218</li>
-          </ul>
-        </h2>
-      </div>
-      <div class="footer">
-        <!--<h2><a href="#">latest post</a> / <a href="#">content</a></h2>-->
-        <!--</div>-->
-        <h2 id="problem">
-          integral of the week:
-          ${{ site.data.integrals | first }}$
-        </h2>
-      </div>
+    <div class="spiral"></div>
+    <div class="title">
+      <h1>
+        <ul>
+          <li>mesa</li>
+          <li>math club</li>
+        </ul>
+      </h1>
+      <h2>
+        <ul>
+          <li>wednesdays,</li>
+          <li>3:00, MS-218</li>
+        </ul>
+      </h2>
+    </div>
+    <div class="footer">
+      <h2 id="problem">
+        problem of the week
+      </h2>
     </div>
   </body>
 </html>
