@@ -17,9 +17,9 @@ html, body {
   padding: 0;
   height: 100%;
   background-image:
-    url($background-image),
-    linear-gradient(to top, white, $background-color);
-  background-blend-mode: luminosity;
+    url($background-image);
+    //linear-gradient(to top, white, $background-color);
+  //background-blend-mode: luminosity;
 }
 
 a {
