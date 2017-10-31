@@ -1,8 +1,9 @@
 $color-a: #fff; // white (text)
-$color-b: #102030; // dark blue (background)
+$color-b: rgba(16,32,48,0.5); // dark blue (background) #102030
 $color-c: #7090b0; // ligher blue (link)
 
-$background-image: "../../assets/img/spiral.svg";
+$background-image: "../../assets/img/dark_stripes.png";
+$spiral-image: "../../assets/img/spiral.svg";
 
 html * {
   font-family: 'Josefin Slab', serif;
@@ -10,10 +11,12 @@ html * {
   color: $color-a;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background-color: $color-b;
+  height: 100%;
+  //background-color: $color-b;
+  background-image: url($background-image);
 }
 
 a {
@@ -53,9 +56,9 @@ li {
 }
 
 .container {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
+  height: 100%;
+  background-color: $color-b;
+  z-index: -2;
 }
 
 .title {
@@ -71,7 +74,7 @@ li {
   bottom: 0;
 }
 
-.background {
+.spiral {
   position: fixed;
   width: 9999px;
   height: 9999px;
@@ -80,15 +83,16 @@ li {
   top: -9999px;
   bottom: -9999px;
   margin: auto;
-  background-image: url($background-image);
+  background-image: url($spiral-image);
+  background-position: center;
   background-position: center;
   background-size: 6000px 6000px;
-  z-index: -1;
   -webkit-animation: spin infinite 20s linear;
 }
 
 #problem {
   display: none;
+  margin-bottom: 20px;
 }
 
 @-webkit-keyframes spin {
