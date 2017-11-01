@@ -33,6 +33,10 @@ a:hover {
   color: $link-color;
 }
 
+a:hover ~ .spiral {
+  background-color: #79b;
+}
+
 h1 {
   margin: 0 0 15px 0;
   padding: 0 40px;
