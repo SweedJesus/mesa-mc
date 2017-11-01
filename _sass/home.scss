@@ -10,7 +10,6 @@ $spiral-svg: "../../assets/img/spiral.svg";
 
 html * {
   font-family: 'Josefin Slab', serif;
-  font-weight: normal;
   margin: 0;
   padding: 0;
 }
@@ -35,13 +34,17 @@ a:hover {
   color: $link-color;
 }
 
+h1, h2 {
+  font-weight: normal;
+  line-height: 1;
+}
+
 h1 {
   font-size: 7em;
 }
 
 h2 {
   font-size: 3em;
-  text-align: center;
 }
 
 ul {
