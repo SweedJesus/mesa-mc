@@ -11,6 +11,7 @@ $spiral-svg: "../../assets/img/spiral.svg";
 html * {
   font-family: 'Josefin Slab', serif;
   font-weight: normal;
+  color: $text-color;
 }
 
 html, body {
@@ -24,9 +25,7 @@ html, body {
 }
 
 a {
-  color: $text-color;
   text-decoration: none;
-  transition: color .2s ease-out, background 1s ease-in;
 }
 
 h1 {
@@ -60,6 +59,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -65%);
+  transition: color .2s ease-out, background 1s ease-in;
 }
 
 .title:hover * {
@@ -92,7 +92,6 @@ li {
   top: -9999px;
   bottom: -9999px;
   margin: auto;
-  z-index: -1;
   background-image: url($spiral-svg);
   background-blend-mode: multiply;
   background-position: center;
