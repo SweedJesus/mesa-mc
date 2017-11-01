@@ -1,4 +1,4 @@
-$font-color: #fff; // white
+$text-color: #fff; // white
 $link-color: #7090b0; // ligher blue
 
 //$background-image: "../../assets/img/ep_naturalblack.png";
@@ -11,13 +11,14 @@ $spiral-image: "../../assets/img/spiral.svg";
 html * {
   font-family: 'Josefin Slab', serif;
   font-weight: normal;
-  color: $font-color;
+  color: $text-color;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  //margin: 0;
+  //padding: 0;
   height: 100%;
+  background-color: transparent;
   background-image:
     url($background-image),
     linear-gradient(to top, $background-color-a, $background-color-b);
@@ -25,54 +26,55 @@ html, body {
 }
 
 a {
-  color: inherit;
+  color: $link-color;
   text-decoration: none;
   transition: color .2s ease-out, background 1s ease-in;
 }
 
 a:hover {
-  color: $link-color;
+  color: $text-color;
 }
 
 h1 {
-  margin: 0 0 15px 0;
-  padding: 0 40px;
+  //margin: 0 0 15px 0;
+  //padding: 0 40px;
   font-size: 7em;
-  text-align: center;
-  line-height: 1em;
+  //text-align: center;
+  //line-height: 1em;
 }
 
 h2 {
-  margin: 0;
-  padding: 0 40px;
+  //margin: 0;
+  //padding: 0 40px;
   font-size: 3em;
   text-align: center;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  //margin: 0;
+  //padding: 0;
   list-style: none;
 }
 
 li {
-  display: inline;
+  //display: inline;
   white-space: nowrap;
 }
 
-.title {
-  position: fixed;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-60%);
-}
+//#carousel {
+//.title {
+  //position: fixed;
+  //width: 100%;
+  //top: 50%;
+  //transform: translateY(-60%);
+//}
 
-.footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  padding-bottom: 20px;
-}
+//.footer {
+  //width: 100%;
+  //position: fixed;
+  //bottom: 0;
+  //padding-bottom: 20px;
+//}
 
 .spiral {
   position: fixed;
@@ -92,9 +94,9 @@ li {
   -o-webkit-animation: spin infinite 20s linear;
 }
 
-#problem {
+//#problem {
   //display: none;
-}
+//}
 
 @-webkit-keyframes spin {
   from {

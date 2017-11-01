@@ -4,51 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Mesa Math Club</title>
-    <link rel="stylesheet" href="assets/css/home.css"/>
+    <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home.css"/>
+  </head>
+  <body>
+    <div class="spiral"></div>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1><ul><li>mesa</li> <li>math club</li></ul></h1>
+          <h2><ul><li>wednesdays,</li> <li>3:00, MS-218</li></ul></h2>
+        </div>
+        <div class="carousel-item">
+          <h1>TEST</h1>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--<div class="title">-->
+    <!--<h1><ul><li>mesa</li> <li>math club</li></ul></h1>-->
+    <!--<h2><ul><li>wednesdays,</li> <li>3:00, MS-218</li></ul></h2>-->
+    <!--</div>-->
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         messageStyle: "none",
+        menuSettings: { zoom: "none" }
       });
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG"></script>
     <script>
-      // Fade out "problem of the week", fade in MathJax problem
       $(function() {
-        var problem = $("#problem");
-        setTimeout(function() {
-          problem.fadeOut(300, function() {
-            problem.html(String.raw`${{ site.data.integrals | first }}$`);
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
-              problem.fadeIn(300);
-            })
-          });
-        }, 1000);
+        $("#carousel").carousel("pause");
       });
     </script>
-  </head>
-  <body>
-    {% include mathjax.html %}
-    <div class="spiral"></div>
-    <div class="title">
-      <h1>
-        <ul>
-          <li>mesa</li>
-          <li>math club</li>
-        </ul>
-      </h1>
-      <h2>
-        <ul>
-          <li>wednesdays,</li>
-          <li>3:00, MS-218</li>
-        </ul>
-      </h2>
-    </div>
-    <div class="footer">
-      <h2 id="problem">
-        problem of the week
-      </h2>
-    </div>
   </body>
 </html>

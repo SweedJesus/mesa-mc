@@ -1,7 +1,9 @@
 ---
 layout: default
+title: Problems of the week
 ---
-Past integrals of the week:
+# Calculus
+## Integrals
 {% for integral in site.data.integrals %}
-- {{ integral }}
+1. \\({{ integral }}\\)
 {% endfor %}
