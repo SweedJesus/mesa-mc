@@ -61,9 +61,9 @@ li {
 
 .title {
   position: fixed;
-  width: 100%;
   top: 50%;
-  transform: translateY(-60%);
+  left: 50%;
+  transform: translate(-50%, -60%);
 }
 
 .footer {
