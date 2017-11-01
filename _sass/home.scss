@@ -29,14 +29,6 @@ a {
   transition: color .2s ease-out, background 1s ease-in;
 }
 
-a:hover {
-  color: $link-color;
-}
-
-a:hover ~ .spiral {
-  background-color: #79b;
-}
-
 h1 {
   margin: 0 0 15px 0;
   padding: 0 40px;
@@ -69,6 +61,15 @@ li {
   left: 50%;
   transform: translate(-50%, -65%);
 }
+
+.title:hover {
+  color: $link-color;
+}
+
+.title:hover ~ .spiral {
+  background-color: #79b;
+}
+
 
 .footer {
   width: 100%;
