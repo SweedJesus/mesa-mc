@@ -74,6 +74,11 @@ li {
   padding-bottom: 20px;
 }
 
+
+#problem {
+  //display: none;
+}
+
 .spiral {
   position: fixed;
   width: 9999px;
@@ -88,21 +93,26 @@ li {
   background-position: center;
   background-size: 6000px 6000px;
   -webkit-animation: spin infinite 20s linear;
-  -moz-webkit-animation: spin infinite 20s linear;
-  -o-webkit-animation: spin infinite 20s linear;
-}
-
-#problem {
-  //display: none;
+  -moz-animation: spin infinite 20s linear;
+  -o-animation: spin infinite 20s linear;
+  animation: spin infinite 20s linear;
 }
 
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes spin {
+  from { -o-transform: rotate(0deg); }
+  to { -o-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 875px) {
