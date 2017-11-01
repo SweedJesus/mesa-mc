@@ -62,7 +62,7 @@ li {
   transform: translate(-50%, -65%);
 }
 
-.title:hover {
+.title:hover * {
   color: $link-color;
 }
 
