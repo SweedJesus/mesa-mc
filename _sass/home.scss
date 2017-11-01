@@ -91,6 +91,7 @@ li {
   top: -9999px;
   bottom: -9999px;
   margin: auto;
+  z-index: -1;
   background-image: url($spiral-svg);
   background-blend-mode: multiply;
   background-position: center;
