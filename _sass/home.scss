@@ -27,7 +27,7 @@ a {
   display: inline-block;
   color: $text-color;
   text-decoration: none;
-  transition: color .2s ease-out, background 1s ease-in;
+  transition: .2s;
 }
 
 a:hover {
@@ -87,6 +87,7 @@ li {
   bottom: -9999px;
   margin: auto;
   pointer-events: none;
+  transition: inherit;
   
   //background-image: url($spiral-svg);
   //background-blend-mode: multiply;
