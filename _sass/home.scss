@@ -6,7 +6,7 @@ $background-image: "../../assets/img/dark_stripes.png";
 $background-color-a: #102030; // top
 $background-color-b: #204060; // bottom
 
-$spiral-image: "../../assets/img/spiral.svg";
+$spiral-svg: "../../assets/img/spiral.svg";
 
 html * {
   font-family: 'Josefin Slab', serif;
@@ -87,9 +87,13 @@ li {
   top: -9999px;
   bottom: -9999px;
   margin: auto;
-  background-image: url($spiral-image);
+  background-image: url($spiral-svg);
+  background-blend-mode: multiply;
   background-position: center;
   background-size: 6000px 6000px;
+  mask-image: url($spiral-svg);
+  mask-position: center;
+  mask-size: 6000px 6000px;
   -webkit-animation: spin infinite 40s linear;
   -moz-animation: spin infinite 40s linear;
   -o-animation: spin infinite 40s linear;
