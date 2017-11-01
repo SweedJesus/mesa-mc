@@ -1,4 +1,4 @@
-$font-color: #fff; // white
+$text-color: #fff; // white
 $link-color: #7090b0; // ligher blue
 
 //$background-image: "../../assets/img/ep_naturalblack.png";
@@ -11,7 +11,7 @@ $spiral-image: "../../assets/img/spiral.svg";
 html * {
   font-family: 'Josefin Slab', serif;
   font-weight: normal;
-  color: $font-color;
+  color: $text-color;
 }
 
 html, body {
