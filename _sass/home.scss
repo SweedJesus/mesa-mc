@@ -33,7 +33,7 @@ a:hover {
   color: $link-color;
 }
 
-a:hover ~ .spiral {
+a:hover + .spiral {
   background-color: #79b;
 }
 
