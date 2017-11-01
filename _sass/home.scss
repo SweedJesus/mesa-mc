@@ -81,8 +81,8 @@ li {
 
 .spiral {
   position: fixed;
-  width: 9999px;
-  height: 9999px;
+  width: 6000px;
+  height: 6000px;
   left: -9999px;
   right: -9999px;
   top: -9999px;
@@ -90,7 +90,7 @@ li {
   margin: auto;
   background-image: url($spiral-image);
   background-position: center;
-  background-position: center;
+  background-size: 6000px 6000px;
   -webkit-animation: spin infinite 40s linear;
   -moz-animation: spin infinite 40s linear;
   -o-animation: spin infinite 40s linear;
@@ -115,11 +115,16 @@ li {
 }
 
 @media (max-width: 1920px) {
-  background-size: 3000px 3000px;
+  .spiral {
+    width: 3000px;
+    height: 3000px;
+  }
 }
 
 @media (max-width: 875px) {
   .spiral {
+    width: 1500px;
+    height: 1500px;
     background-size: 2500px 2500px;
   }
 
