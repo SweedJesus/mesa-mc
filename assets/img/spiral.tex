@@ -1,6 +1,7 @@
 \documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg
 \infile\space\outfile}},multi=false]{standalone}
 \usepackage{tikz}
+%\usetikzlibrary{backgrounds}
 \newcommand\spiral{}%
 \def\spiral[#1](#2)(#3:#4:#5){%
   \pgfmathsetmacro{\domain}{pi*#3/180+#4*2*pi}
@@ -12,9 +13,24 @@
     samples=int(\domain/0.08)] plot({\t r}: {#5*\t/\domain})
     }
 \begin{document}
-%\pagecolor{black}
 \begin{tikzpicture}
-  \spiral[white,line width=0.4mm](0,0)(0:6:25);
-  \spiral[white,line width=0.4mm](0,0)(0:6:-25);
+  %\begin{scope}[transparency group]
+    %\begin{scope}[blend mode=difference]
+        %\pagecolor{white}
+        %\pagecolor{black}
+
+        %\spiral[black,line width=0.4mm](0,0)(0:6:25);
+        %\spiral[black,line width=0.4mm](0,0)(0:6:-25);
+
+        \spiral[white,line width=0.4mm](0,0)(0:6:25);
+        \spiral[white,line width=0.4mm](0,0)(0:6:-25);
+
+        %\spiral[black,opacity=0,line width=0.4mm](0,0)(0:6:25);
+        %\spiral[black,opacity=0,line width=0.4mm](0,0)(0:6:-25);
+
+        %\spiral[white,opacity=0,line width=0.4mm](0,0)(0:6:25);
+        %\spiral[white,opacity=0,line width=0.4mm](0,0)(0:6:-25);
+    %\end{scope}
+  %\end{scope}
 \end{tikzpicture}
 \end{document}

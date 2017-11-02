@@ -21,21 +21,17 @@ html, body {
     url($background-image),
     linear-gradient(to top, $background-color-a, $background-color-b);
   background-blend-mode: screen;
+  overflow: hidden;
 }
 
 a {
   display: inline-block;
   color: $text-color;
   text-decoration: none;
-  transition: .2s;
 }
 
 a:hover {
   color: $link-color;
-  
-  .spiral {
-    background-color: $link-color;
-  }
 }
 
 h1, h2 {
@@ -87,20 +83,10 @@ li {
   bottom: -9999px;
   margin: auto;
   pointer-events: none;
-  transition: inherit;
   
-  //background-image: url($spiral-svg);
-  //background-blend-mode: multiply;
-  //background-position: center;
-  //background-size: 6000px 6000px;
-  background-color: #fff;
-  
-  -webkit-mask-image: url($spiral-svg);
-  mask-image: url($spiral-svg);
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: 6000px 6000px;
-  mask-size: 6000px 6000px;
+  background-image: url($spiral-svg);
+  background-position: center;
+  background-size: 6000px 6000px;
   
   -webkit-animation: spin infinite 40s linear;
   animation: spin infinite 40s linear;
