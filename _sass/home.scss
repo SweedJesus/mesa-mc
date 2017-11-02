@@ -21,7 +21,6 @@ html, body {
     url($background-image),
     linear-gradient(to top, $background-color-a, $background-color-b);
   background-blend-mode: screen;
-  overflow: hidden;
 }
 
 a {
@@ -47,15 +46,6 @@ h2 {
   font-size: 3em;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline;
-  white-space: nowrap;
-}
-
 .title {
   position: fixed;
   width: 100%;
@@ -63,14 +53,6 @@ li {
   left: 50%;
   transform: translate(-50%, -65%);
   text-align: center;
-}
-
-
-.footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  padding-bottom: 20px;
 }
 
 .spiral {
@@ -82,7 +64,6 @@ li {
   top: -9999px;
   bottom: -9999px;
   margin: auto;
-  pointer-events: none;
   
   background-image: url($spiral-svg);
   background-position: center;
