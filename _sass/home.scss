@@ -25,8 +25,8 @@ html, body {
 
 a {
   display: inline-block;
-  color: $text-color;
   text-decoration: none;
+  color: $text-color;
 }
 
 a:hover {
@@ -71,6 +71,13 @@ h2 {
   
   -webkit-animation: spin infinite 40s linear;
   animation: spin infinite 40s linear;
+}
+
+.potw {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
 }
 
 @-webkit-keyframes spin {

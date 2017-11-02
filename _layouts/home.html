@@ -11,11 +11,36 @@
   <body>
     <div class="spiral"></div>
     <div class="title">
-      <a href="#">
+      <a href="/home">
         <h1>mesa math club</h1>
         <h2>wednesdays, 3:00, MS-218</h2>
       </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <div class="potw">
+      <a href="/potw">
+        <h2>problem of the week</h2>
+      </a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        messageStyle: "none",
+        menuSettings: { zoom: "None" }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG"></script>
+    <script>
+      $(function() {
+        var problem = $(".potw > a > h2");
+        setTimeout(function() {
+          problem.fadeOut(300, function() {
+            problem.html(String.raw`\({{ site.data.integrals | first }}\)`);
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
+              problem.fadeIn(300);
+            })
+          });
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
